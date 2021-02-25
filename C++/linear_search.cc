@@ -6,8 +6,9 @@ int LinearSearch(const std::vector<int>& arr, const int target){
     int length = arr.size();
 
     for(int i=0; i<length; i++){
-        if(arr[i]==target)
+        if(arr[i]==target){
             return i;
+        }
     }
 
     return -1;
