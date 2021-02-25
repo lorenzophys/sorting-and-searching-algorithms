@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 
 void BubbleSort(std::vector<int>& arr){
@@ -11,10 +12,7 @@ void BubbleSort(std::vector<int>& arr){
 
         for(int j=0; j<unsorted; j++){
             if(arr[j]>arr[j+1]){
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-
+                std::swap(arr[j], arr[j+1]);
                 swapped = true;
             }
         }

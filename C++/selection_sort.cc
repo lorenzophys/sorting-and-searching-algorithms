@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 
 void SelectionSort(std::vector<int>& arr){
@@ -14,9 +15,7 @@ void SelectionSort(std::vector<int>& arr){
             }
         }
 
-        int temp = arr[i];
-        arr[i] = arr[min];
-        arr[min] = temp;
+        std::swap(arr[i], arr[min]);
     }
 }
 
