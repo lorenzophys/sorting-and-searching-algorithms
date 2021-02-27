@@ -11,20 +11,20 @@ void QuickSort(Iterator start, Iterator end){
         return;
     }
     else{
-        Iterator pivot = start;
-        Iterator ptr = start + 1;
+        Iterator pivot = std::prev(end);
+        Iterator ptr = start;
 
-        for(Iterator it=start+1; it<end; ++it){
+        for(Iterator it=start; it<end; ++it){
             if(*it<*pivot){
                 std::iter_swap(it, ptr);
                 ++ptr;
             }
         }
 
-        std::iter_swap(ptr-1, start);
+        std::iter_swap(ptr, pivot);
 
-        QuickSort(start, ptr-1);
-        QuickSort(ptr, end);
+        QuickSort(start, ptr);
+        QuickSort(ptr+1, end);
     }
 }
 
