@@ -3,20 +3,12 @@
 
 void BubbleSort(int arr[], int length){
     for(int i=0; i<length; ++i){
-        int swapped = 0;
-        int unsorted = length - i - 1;
-
-        for(int j=0; j<unsorted; ++j){
-            if(arr[j]>arr[j+1]){
+        for(int j=0; j<i; ++j){
+            if(arr[j]>arr[i]){
                 int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-                swapped = 1;
+                arr[j] = arr[i];
+                arr[i] = temp;
             }
-        }
-
-        if(!swapped){
-            break;
         }
     }
 }
