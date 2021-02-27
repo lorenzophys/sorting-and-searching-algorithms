@@ -5,8 +5,8 @@ void Merge(int arr[], int begin, int mid, int end){
     int lenLeft = mid - begin + 1;
     int lenRight = end - mid;
 
-    int left[lenLeft];
-    int right[lenRight];
+    int left[10];
+    int right[10];
     
     for (int i=0; i<lenLeft; ++i)
         left[i] = arr[begin+i];
